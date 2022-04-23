@@ -1,10 +1,7 @@
 const livros = require('./database')
 
 const read = require('readline-sync')
-
-// console.log(livros)
-// const resposta = read.question('Esta funcionando? S/N ').toUpperCase()
-// console.log(resposta)
+const buscarLivros = require('./controllers/buscarLivros')
 
 const resposta = read.question(`
 ============== Menu ================
@@ -19,4 +16,14 @@ const resposta = read.question(`
 Digite um numero[1-5]:
 `)
 
-console.log(resposta)
+switch (resposta){
+    case '1':
+        buscarLivros()
+        break
+    case '2':
+    // chamar a função listarLivrosOrdenados
+        break
+    default:
+        console.log('fim do algoritmo')
+        break
+}
