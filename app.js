@@ -5,6 +5,7 @@ const buscarLivros = require('./controllers/buscarLivros')
 const listarLivrosOrdenados = require('./controllers/listarLivrosOrdenados')
 const listarlivrosNaoLidos = require('./controllers/listarLivrosNaoLidos')
 const desejaSair = require('./controllers/desejaSair')
+const listarRecomendados = require('./controllers/listarRecomendados')
 
 const resposta = read.question(`
 ============== Menu ================
@@ -26,7 +27,7 @@ switch (resposta){
     case '2':
         listarLivrosOrdenados()
         break
-    case '3':
+    case'3':
         listarRecomendados()
         break
     case '4':
